@@ -11,6 +11,8 @@ A backend API developed using Express.js and MongoDB to manage tasks and subtask
 - [Environment Variables](#environment-variables)
 - [Project Structure](#project-structure)
 - [Testing](#testing)
+- [Manual Testing with Postman](#manual-testing-with-postman)
+- [Swagger Documentation](#swagger-documentation)
 
 ## Features
 
@@ -20,6 +22,7 @@ A backend API developed using Express.js and MongoDB to manage tasks and subtask
 - **Soft Deletion**: Mark tasks and subtasks as deleted without removing them from the database.
 - **Error Handling**: error handling for all API endpoints.
 - **Environment Configuration**: Configuration using dotenv.
+- **API Documentation**: Integrates Swagger for detailed API documentation and testing.
 
 ## Installation
 
@@ -195,6 +198,7 @@ The application uses the following environment variables:
 │
 ├── /config
 │   └── db.js
+│   └── swager.js
 │
 │├── /controllers
 ││   ├── taskController.js
@@ -239,3 +243,11 @@ You can manually test the API using Postman by creating requests for each endpoi
 - Updating a task with an invalid task ID.
 - Deleting a task that does not exist.
 - Listing subtasks for a task marked as deleted.
+
+## Swagger Documentation
+
+The API documentation is available at `http://localhost:4004/api-docs` once the server is running. You can use Swagger to test the API endpoints and view detailed documentation.
+
+```bash
+http://localhost:4004/api-docs
+```
