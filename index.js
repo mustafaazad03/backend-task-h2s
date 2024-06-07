@@ -4,6 +4,7 @@ const taskRoutes = require("./app/routes/taskRoutes");
 const subtaskRoutes = require("./app/routes/subTaskRoute");
 const userRoutes = require("./app/routes/userRoutes");
 const { config } = require("dotenv");
+const setupSwagger = require("./app/config/swager");
 
 const app = express();
 
@@ -20,5 +21,8 @@ app.use("/api", taskRoutes);
 app.use("/api", subtaskRoutes);
 app.use("/api", userRoutes);
 
-const PORT = process.env.PORT || 5000;
+// Setting Up Swagger
+setupSwagger(app);
+
+const PORT = process.env.PORT || 4004;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
