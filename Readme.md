@@ -47,6 +47,7 @@ A backend API developed using Express.js and MongoDB to manage tasks and subtask
    MONGO_URI=mongodb://localhost:27017/your-database
    NODE_ENV=development
    PORT=4004
+   FRONTEND_URL="http://localhost:3000"
    ```
 
 4. **Start the server**
