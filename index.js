@@ -10,7 +10,12 @@ const cors = require("cors");
 const app = express();
 config();
 
-app.use(cors());
+app.use(
+	cors({
+		origin: [process.env.FRONTEND_URL, "https://backend-task-h2s.vercel.app"],
+		credentials: true,
+	})
+);
 
 // Connect to database
 connectDB();
