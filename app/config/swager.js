@@ -11,7 +11,11 @@ const options = {
 		},
 		servers: [
 			{
-				url: "http://localhost:3000/api",
+				url: "https://backend-task-h2s.vercel.app/api",
+				description: "Production server",
+			},
+			{
+				url: "http://localhost:4004/api",
 				description: "Development server",
 			},
 		],
