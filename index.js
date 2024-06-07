@@ -10,12 +10,7 @@ const cors = require("cors");
 const app = express();
 config();
 
-app.use(
-	cors({
-		origin: process.env.FRONTEND_URL,
-		credentials: true,
-	})
-);
+app.use(cors());
 
 // Connect to database
 connectDB();
