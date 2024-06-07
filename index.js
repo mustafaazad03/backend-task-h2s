@@ -5,10 +5,17 @@ const subtaskRoutes = require("./app/routes/subTaskRoute");
 const userRoutes = require("./app/routes/userRoutes");
 const { config } = require("dotenv");
 const setupSwagger = require("./app/config/swager");
+const cors = require("cors");
 
 const app = express();
-
 config();
+
+app.use(
+	cors({
+		origin: process.env.FRONTEND_URL,
+		credentials: true,
+	})
+);
 
 // Connect to database
 connectDB();
